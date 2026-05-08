@@ -1,4 +1,5 @@
 import pygame
+import random
 
 class Button:
     def __init__(self, text, x, y, width, height, color, callback):
@@ -10,8 +11,11 @@ class Button:
 
 
     def draw(self, window, font):
+        a = random.randint(0, 255)
+        b = random.randint(0, 255)
+        c = random.randint(0, 255)
         # Farbe ändern, wenn Maus drüber ist (Hover-Effekt)
-        color = (200, 200, 200) if self.is_hovered else self.color  
+        color = (a, b, c) if self.is_hovered else self.color  
         pygame.draw.rect(window, color, self.rect)
 
         #Text rendern

@@ -1,4 +1,5 @@
 import pygame
+import random
 
 class Scorecard:
     def __init__(self, x, y):
@@ -12,24 +13,32 @@ class Scorecard:
         self.rect = pygame.Rect(x, y, 300, 700)
     
     def draw(self, window, font):
-        pygame.draw.rect(window, (0, 255, 0), self.rect)
+        a = random.randint(0, 255)
+        b = random.randint(0, 255)
+        c = random.randint(0, 255)
+        
+        a2 = random.randint(0, 255)
+        b2 = random.randint(0, 255)
+        c2 = random.randint(0, 255)
+
+        pygame.draw.rect(window, (a2, b2, c2), self.rect)
         list = ["Eins", "Zweien", "Dreien", "Vieren", "Fünfen", "Sechsen", "Gesamt", "Bonus", "Gesamt Bonus", "Dreierpasch", "Viererpasch", "Full-House", "Kleine Straße", "Große Straße", "Knüller", "Chance", "Gesamt unten", "Gesamt oben", "Ergebnis" ]
         y = 0
         for i in list:
             y += 30
-            text_surf = font.render(i, True, (0, 255, 255))
+            text_surf = font.render(i, True, (a, b, c))
             window.blit(text_surf, (720, y))
         
         y = 0
         for i in list:
             y += 30
-            text_surf = font.render("0", True, (0, 255, 255))
+            text_surf = font.render("0", True, (a, b, c))
             window.blit(text_surf, (870, y))
         
         y = 0
         for i in list:
             y += 30
-            text_surf = font.render("0", True, (0, 255, 255))
+            text_surf = font.render("0", True, (a, b, c))
             window.blit(text_surf, (920, y))
 
         
