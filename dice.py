@@ -35,7 +35,7 @@ class Dice:
         elif self.value == 6:
             pygame.draw.circle(window, "black",(self.x+8, self.y+8), 5) 
             pygame.draw.circle(window, "black",(self.x+8, self.y+43), 5)
-            pygame.draw.circle(window, "black",(self.x+8, self.y+23), 5)
+            pygame.draw.circle(window, "black",(self.x+8, self.y+25), 5)
             pygame.draw.circle(window, "black",(self.x+43, self.y+8), 5)
             pygame.draw.circle(window, "black",(self.x+43, self.y+43), 5)
             pygame.draw.circle(window, "black",(self.x+43, self.y+25), 5)
